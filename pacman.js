@@ -17,14 +17,14 @@ var blinky = {
   character: 'Speedy',
   edible: false
 };
-var inky = {
+var pinky = {
   menu_option: '3',
   name: 'Pinky',
   color: 'Pink',
   character: 'Bashful',
   edible: false
 };
-var inky = {
+var clyde = {
   menu_option: '4',
   name: 'Clyde',
   color: 'Orange',
@@ -33,7 +33,11 @@ var inky = {
 };
 
 // replace this comment with your four ghosts setup as objects
-
+var ghosts = [];
+ghosts.push(inky);
+ghosts.push(blinky);
+ghosts.push(pinky);
+ghosts.push(clyde);
 
 // Draw the screen functionality
 function drawScreen() {
