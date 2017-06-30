@@ -65,10 +65,10 @@ function displayMenu() {
   if (powerPallets > 0) {
     console.log('(p) Eat Power-Pallet');
   }
-  console.log('(1) Eat ' + ghosts[0].name);
-  console.log('(2) Eat ' + ghosts[1].name);
-  console.log('(3) Eat ' + ghosts[2].name);
-  console.log('(4) Eat ' + ghosts[3].name);
+  console.log('(1) Eat ' + ghosts[0].name + ' - ' + ghostEdibleStatus(ghosts[0]));
+  console.log('(2) Eat ' + ghosts[1].name + ' - ' + ghostEdibleStatus(ghosts[1]));
+  console.log('(3) Eat ' + ghosts[2].name + ' - ' + ghostEdibleStatus(ghosts[2]));
+  console.log('(4) Eat ' + ghosts[3].name + ' - ' + ghostEdibleStatus(ghosts[3]));
   console.log('(q) Quit');
 }
 
@@ -102,6 +102,14 @@ function lifeLost() {
   lives--;
   if(lives === 0) {
     process.exit();
+  }
+}
+
+function ghostEdibleStatus(ghost){
+  if(ghost.edible === false) {
+    return 'inedible';
+  } else {
+    return 'edible';
   }
 }
 
