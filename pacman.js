@@ -97,6 +97,14 @@ function lifeLost() {
   }
 }
 
+function eatPowerPallete(){
+  score += 50;
+  powerPallets--;
+  for (var ghost_index = 0; ghost_index < ghosts.length; ghost_index++){
+    ghosts[ghost_index].edible = true;
+  }
+}
+
 // Process Player's Input
 function processInput(key) {
   switch(key) {
@@ -106,6 +114,9 @@ function processInput(key) {
       break;
     case 'd':
       eatDot();
+      break;
+    case 'p':
+      eatPowerPallete();
       break;
     case '1':
       eatGhost(ghosts[0]);
