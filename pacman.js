@@ -87,8 +87,14 @@ function eatDot() {
 // process eating an inedible ghosts
 function eatGhost(ghost) {
   if (ghost.edible === false) {
-    console.log('\n' + ghost.name + ' with color ' + ghost.color + ' kills Pac-Man. You lost lift.' );
+    console.log('\n' + ghost.color + ' colored ' + ghost.name + ' kills Pac-Man. You lost life.' );
     lifeLost();
+  } else {
+    console.log('\nYou ate ' + ghost.character + ' ' + ghost.name + '.');
+    score += 200;
+    for (var ghost_index = 0; ghost_index < ghosts.length; ghost_index++){
+      ghosts[ghost_index].edible = false;
+    }
   }
 }
 
