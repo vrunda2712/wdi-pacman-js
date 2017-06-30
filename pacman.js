@@ -79,6 +79,12 @@ function eatDot() {
   score += 10;
 }
 
+// process eating an inedible ghosts
+function eatGhost(ghost) {
+  if (ghost.edible === false) {
+    console.log('\n' + ghost.color + 'colored ghost' + ghost.name + 'kills Pac-Man.');
+  }
+}
 
 // Process Player's Input
 function processInput(key) {
