@@ -1,6 +1,7 @@
 // Setup initial game stats
 var score = 0;
 var lives = 2;
+var powerPallets = 4;
 
 // Define your ghosts here
 var inky = {
@@ -55,6 +56,7 @@ function clearScreen() {
 
 function displayStats() {
   console.log('Score: ' + score + '     Lives: ' + lives);
+  console.log('Power-Pallets: ' + powerPallets);
 }
 
 function displayMenu() {
