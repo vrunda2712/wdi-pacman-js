@@ -62,6 +62,7 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
+  console.log('(p) Eat Power-Pallets');
   console.log('(1) Eat ' + ghosts[0].name);
   console.log('(2) Eat ' + ghosts[1].name);
   console.log('(3) Eat ' + ghosts[2].name);
